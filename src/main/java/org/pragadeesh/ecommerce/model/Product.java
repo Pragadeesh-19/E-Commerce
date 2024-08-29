@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -21,6 +22,13 @@ public class Product {
 
     private String name;
     private String description;
-    private String price;
+    private BigDecimal price;
     private Integer stock;
+
+    public Product(String name, String description, BigDecimal price, int stock) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stock = stock;
+    }
 }
